@@ -1,7 +1,7 @@
 Interview Ready Parent Roadmap
 Wired to Work: Your Brain, Your Path | Groundwork Collaborative
 
-A single page tool that helps a parent support a young adult before a job interview. Parents answer a few questions, complete a support check, and get a personal roadmap with conversation starters. They can download it as a PDF.
+A single page tool that helps a parent support a young adult before a job interview. Parents answer a few questions, complete a support check, and get a personal roadmap with conversation starters.
 
 Privacy
 Answers stay in the visitor's browser (localStorage). Nothing is sent to a server.
@@ -18,5 +18,4 @@ Publish with GitHub Pages
 6. Your page goes live at https://YOUR-USERNAME.github.io/YOUR-REPO/ in a minute or two.
 
 Notes
-The page loads two fonts from Google Fonts and the jsPDF library from cdnjs. Visitors need an internet connection for the fonts and the PDF download.
-Remove the "Draft for review" box at the top of index.html (the p tag with class draft-note) before sharing publicly.
+The page loads two fonts from Google Fonts. It still works with system fonts if they do not load.

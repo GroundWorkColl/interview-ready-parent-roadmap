@@ -5,48 +5,52 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Lexend:wght@500;600;700&display=swap">
-<style>body{margin:0;background:#e9f3f3;padding:20px 16px 32px;font-family:"Atkinson Hyperlegible",Arial,sans-serif}
-.draft-note{max-width:780px;margin:0 auto 14px;font-size:15px;line-height:1.5;color:#012a4e;background:#fff;border:1.5px solid #e7c7cf;border-radius:10px;padding:10px 14px}</style>
+<style>html{color-scheme:light dark}body{margin:0;background:#F6F8FB;font-family:"Atkinson Hyperlegible",Arial,sans-serif}@media (prefers-color-scheme:dark){body{background:#0E1727}}</style>
 <style>
 /* Parent companion to the Interview Ready Roadmap. Same calm single column and brand header band. Support ladder chips darken as support gets more hands on. */
 #irp-app{
-  --irp-navy:#012a4e; --irp-blue:#03567a; --irp-teal-deep:#035f6a;
-  --irp-blue-mid:#108daa; --irp-teal:#1da1a5;
-  --irp-light1:#9CCECE; --irp-light2:#97bfc3; --irp-light3:#b8d7d8;
-  --irp-pink:#e7c7cf;
-  --irp-tint:#e9f3f3; --irp-paper:#ffffff; --irp-line:#cfe2e3; --irp-muted:#3f5f6e;
-  --irp-display:"Lexend", "Helvetica Neue", Arial, sans-serif;
-  --irp-body:"Atkinson Hyperlegible", "Helvetica Neue", Arial, sans-serif;
-  color-scheme:light;
-  font-family:var(--irp-body); font-size:17px; line-height:1.55; color:var(--irp-navy);
-  background:var(--irp-paper);
-  max-width:780px; margin:0 auto; box-sizing:border-box;
-  border-radius:14px; overflow:hidden; box-shadow:0 1px 3px rgba(1,42,78,.12);
+  --irp-navy:#1C3557; --irp-solid:#1C3557; --irp-banner:#1C3557; --irp-fg:#26303F;
+  --irp-blue:#1F5E99; --irp-blue-mid:#2E75B6; --irp-accent:#00838F; --irp-teal:#00838F; --irp-teal-deep:#00838F;
+  --irp-light1:#9CCECE; --irp-light2:#8FB2D6; --irp-light3:#BFE6E9;
+  --irp-pink:#E87722;
+  --irp-tint:#E0F4F5; --irp-paper:#FFFFFF; --irp-line:#CFD7E2; --irp-muted:#5B6676;
+  --irp-display:"Lexend", "Segoe UI", Arial, sans-serif;
+  --irp-body:"Atkinson Hyperlegible", "Segoe UI", Arial, sans-serif;
+  font-family:var(--irp-body); font-size:17px; line-height:1.5; color:var(--irp-fg);
+  margin:0; box-sizing:border-box;
+}
+@media (prefers-color-scheme:dark){
+  #irp-app{
+    --irp-fg:#E6ECF5; --irp-solid:#00838F; --irp-banner:#14233B; --irp-blue:#7DB8EE; --irp-blue-mid:#4C95D6; --irp-accent:#35B7C3;
+    --irp-light1:#2B5560; --irp-light2:#3A5578; --irp-light3:#1F4A52; --irp-pink:#F29A55;
+    --irp-tint:#12343B; --irp-paper:#16233A; --irp-line:#2B3C57; --irp-muted:#9FB0C6;
+  }
 }
 #irp-app *, #irp-app *::before, #irp-app *::after{box-sizing:border-box;}
 #irp-app h1,#irp-app h2,#irp-app h3,#irp-app p,#irp-app ol,#irp-app ul,#irp-app fieldset,#irp-app legend{margin:0;padding:0;border:0;}
-#irp-app h1,#irp-app h2,#irp-app h3{font-family:var(--irp-display);color:var(--irp-navy);text-wrap:balance;line-height:1.2;}
+#irp-app h1,#irp-app h2,#irp-app h3{font-family:var(--irp-display);color:var(--irp-fg);text-wrap:balance;line-height:1.2;}
 #irp-app button{font:inherit;cursor:pointer;}
 #irp-app [hidden]{display:none!important;}
 #irp-app :focus-visible{outline:3px solid var(--irp-blue-mid);outline-offset:2px;}
-#irp-app .irp-pad{padding-left:max(18px, env(safe-area-inset-left, 0px));padding-right:max(18px, env(safe-area-inset-right, 0px));}
+#irp-app .irp-pad{padding-left:max(16px, env(safe-area-inset-left, 0px), calc((100% - 760px) / 2));padding-right:max(16px, env(safe-area-inset-right, 0px), calc((100% - 760px) / 2));}
 
-#irp-app .irp-head{background:var(--irp-navy);color:#fff;padding-block:26px 22px;position:relative;border-bottom:4px solid var(--irp-teal);}
-#irp-app .irp-head h1{color:#fff;font-size:clamp(26px,6vw,34px);font-weight:700;max-width:80%;}
-#irp-app .irp-head .irp-sub{font-size:16px;margin-top:6px;color:#fff;}
-#irp-app .irp-head .irp-tag{font-size:14px;margin-top:4px;color:var(--irp-light3);max-width:85%;}
-#irp-app .irp-star{position:absolute;right:max(18px, env(safe-area-inset-right, 0px));top:18px;width:58px;height:58px;}
+#irp-app .irp-head{background:var(--irp-banner);color:#fff;padding-block:28px 24px;border-bottom:4px solid var(--irp-teal);display:flex;gap:20px;align-items:center;justify-content:space-between;}
+#irp-app .irp-head h1{color:#fff;font-size:clamp(26px,6vw,36px);font-weight:700;line-height:1.15;}
+#irp-app .irp-head .irp-sub{margin-top:6px;color:#C5D6E8;}
+#irp-app .irp-head .irp-tag{font-size:15px;margin-top:4px;color:#C5D6E8;}
+#irp-app .irp-star{flex:none;width:76px;height:76px;}
+@media (max-width:520px){#irp-app .irp-star{width:56px;height:56px;}}
 
 #irp-app .irp-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding-block:16px;background:var(--irp-tint);border-bottom:1px solid var(--irp-line);}
 #irp-app .irp-stepbtn{display:flex;align-items:center;gap:8px;background:var(--irp-paper);border:1.5px solid var(--irp-line);border-radius:10px;padding:9px 10px;color:var(--irp-blue);text-align:left;min-width:0;}
 #irp-app .irp-stepbtn .n{flex:none;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:var(--irp-tint);color:var(--irp-blue);font-family:var(--irp-display);font-weight:600;font-size:14px;}
 #irp-app .irp-stepbtn .t{font-size:14px;line-height:1.2;font-weight:700;min-width:0;}
-#irp-app .irp-stepbtn[aria-current="step"]{border-color:var(--irp-navy);background:var(--irp-navy);color:#fff;}
-#irp-app .irp-stepbtn[aria-current="step"] .n{background:var(--irp-teal);color:#fff;}
+#irp-app .irp-stepbtn[aria-current="step"]{border-color:var(--irp-fg);background:var(--irp-solid);color:#fff;}
+#irp-app .irp-stepbtn[aria-current="step"] .n{background:rgba(255,255,255,.22);color:#fff;}
 #irp-app .irp-stepbtn.done .n{background:var(--irp-teal);color:#fff;}
 @media (max-width:480px){#irp-app .irp-stepbtn{flex-direction:column;align-items:flex-start;gap:4px;padding:8px;} #irp-app .irp-stepbtn .t{font-size:13px;}}
 
-#irp-app .irp-body{padding-block:24px 30px;display:grid;gap:22px;}
+#irp-app .irp-body{padding-block:28px 40px;display:grid;gap:22px;}
 #irp-app .irp-body > section{display:grid;gap:22px;}
 #irp-app h2{font-size:24px;font-weight:600;}
 #irp-app .irp-lede{color:var(--irp-muted);}
@@ -55,40 +59,40 @@
 @media (max-width:560px){#irp-app .irp-who{grid-template-columns:1fr;}}
 #irp-app .irp-field{display:grid;gap:4px;min-width:0;}
 #irp-app .irp-field label{font-weight:700;font-size:14px;color:var(--irp-blue);}
-#irp-app .irp-field label.big{font-family:var(--irp-display);font-size:18px;color:var(--irp-navy);font-weight:600;}
+#irp-app .irp-field label.big{font-family:var(--irp-display);font-size:18px;color:var(--irp-fg);font-weight:600;}
 #irp-app input[type=text],#irp-app input[type=date],#irp-app textarea{
-  width:100%;font:inherit;font-size:17px;color:var(--irp-navy);background:#fff;
-  border:1.5px solid var(--irp-light2);border-radius:8px;padding:10px 12px;margin:0;min-height:46px;
+  width:100%;font:inherit;font-size:17px;color:var(--irp-fg);background:var(--irp-paper);
+  border:2px solid var(--irp-blue-mid);border-radius:10px;padding:10px 12px;margin:0;min-height:46px;
 }
 #irp-app textarea{min-height:90px;resize:vertical;}
 
 #irp-app .irp-callout{background:var(--irp-tint);border-left:5px solid var(--irp-teal);border-radius:8px;padding:14px 16px;}
-#irp-app .irp-callout strong{color:var(--irp-navy);}
+#irp-app .irp-callout strong{color:var(--irp-fg);}
 
 #irp-app fieldset.irp-q{display:grid;gap:10px;min-width:0;}
-#irp-app .irp-q legend,#irp-app .irp-qhead{display:flex;gap:12px;align-items:flex-start;font-family:var(--irp-display);font-weight:600;font-size:19px;margin-bottom:10px;line-height:1.3;color:var(--irp-navy);}
-#irp-app .irp-num{flex:none;width:30px;height:30px;border-radius:50%;background:var(--irp-navy);color:#fff;display:grid;place-items:center;font-size:15px;font-family:var(--irp-display);font-weight:600;}
+#irp-app .irp-q legend,#irp-app .irp-qhead{display:flex;gap:12px;align-items:flex-start;font-family:var(--irp-display);font-weight:600;font-size:19px;margin-bottom:10px;line-height:1.3;color:var(--irp-fg);}
+#irp-app .irp-num{flex:none;width:30px;height:30px;border-radius:50%;background:var(--irp-solid);color:#fff;display:grid;place-items:center;font-size:15px;font-family:var(--irp-display);font-weight:600;}
 #irp-app .irp-opts{display:grid;gap:8px;padding-left:42px;}
 #irp-app .irp-opts.two{grid-template-columns:1fr 1fr;}
 @media (max-width:480px){#irp-app .irp-opts{padding-left:0;}}
-#irp-app .irp-opt{position:relative;display:flex;align-items:center;gap:12px;border:1.5px solid var(--irp-line);border-radius:10px;padding:12px 14px;background:#fff;cursor:pointer;min-height:52px;}
+#irp-app .irp-opt{position:relative;display:flex;align-items:center;gap:12px;border:1.5px solid var(--irp-line);border-radius:10px;padding:12px 14px;background:var(--irp-paper);cursor:pointer;min-height:52px;}
 #irp-app .irp-opt input{position:absolute;opacity:0;width:1px;height:1px;}
 #irp-app .irp-opt .dot{flex:none;width:22px;height:22px;border-radius:50%;border:2px solid var(--irp-blue-mid);display:grid;place-items:center;}
-#irp-app .irp-opt input:checked ~ .dot{border-color:var(--irp-teal-deep);}
+#irp-app .irp-opt input:checked ~ .dot{border-color:var(--irp-accent);}
 #irp-app .irp-opt input:checked ~ .dot::after{content:"";width:12px;height:12px;border-radius:50%;background:var(--irp-teal-deep);}
-#irp-app .irp-opt:has(input:checked){border-color:var(--irp-teal-deep);background:var(--irp-tint);}
+#irp-app .irp-opt:has(input:checked){border-color:var(--irp-accent);background:var(--irp-tint);}
 #irp-app .irp-opt:has(input:focus-visible){outline:3px solid var(--irp-blue-mid);outline-offset:2px;}
 #irp-app .irp-opt .l{font-size:14px;color:var(--irp-muted);font-weight:700;margin-right:-4px;}
 #irp-app .irp-opt .hint{display:block;font-size:14px;color:var(--irp-muted);}
 #irp-app .irp-opt .box{flex:none;width:22px;height:22px;border-radius:5px;border:2px solid var(--irp-blue-mid);display:grid;place-items:center;}
 #irp-app .irp-opt .box svg{width:14px;height:14px;opacity:0;}
-#irp-app .irp-opt input:checked ~ .box{background:var(--irp-teal-deep);border-color:var(--irp-teal-deep);}
+#irp-app .irp-opt input:checked ~ .box{background:var(--irp-teal-deep);border-color:var(--irp-accent);}
 #irp-app .irp-opt input:checked ~ .box svg{opacity:1;}
 #irp-app .irp-opt.soft{border-style:dashed;}
 
 /* talk together */
 #irp-app .irp-say{display:grid;gap:16px;}
-#irp-app .irp-say h4{font-family:var(--irp-display);font-size:16px;font-weight:600;color:var(--irp-navy);margin:0;}
+#irp-app .irp-say h4{font-family:var(--irp-display);font-size:16px;font-weight:600;color:var(--irp-fg);margin:0;}
 #irp-app .irp-say .sub{font-size:14px;color:var(--irp-muted);margin-top:2px;}
 #irp-app ul.irp-lines{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:6px;}
 #irp-app ul.irp-lines li{border-left:3px solid var(--irp-light1);padding:2px 0 2px 12px;}
@@ -98,78 +102,73 @@
 
 /* support check: three choice rows */
 #irp-app .irp-group{display:grid;gap:12px;}
-#irp-app .irp-group h3{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--irp-blue-mid);border-bottom:2px solid var(--irp-teal);padding-bottom:6px;font-weight:600;}
-#irp-app fieldset.irp-item{display:grid;gap:8px;border:1.5px solid var(--irp-line);border-radius:10px;padding:12px 14px;background:#fff;min-width:0;}
+#irp-app .irp-group h3{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--irp-accent);border-bottom:2px solid var(--irp-teal);padding-bottom:6px;font-weight:600;}
+#irp-app fieldset.irp-item{display:grid;gap:8px;border:1.5px solid var(--irp-line);border-radius:10px;padding:12px 14px;background:var(--irp-paper);min-width:0;}
 #irp-app .irp-item legend{float:left;width:100%;font-weight:700;margin-bottom:8px;}
 #irp-app .irp-tri{display:flex;flex-wrap:wrap;gap:6px;clear:both;}
-#irp-app .irp-pill{position:relative;display:inline-flex;align-items:center;border:1.5px solid var(--irp-light2);border-radius:999px;padding:7px 14px;font-size:15px;color:var(--irp-blue);background:#fff;cursor:pointer;min-height:40px;}
+#irp-app .irp-pill{position:relative;display:inline-flex;align-items:center;border:1.5px solid var(--irp-light2);border-radius:999px;padding:7px 14px;font-size:15px;color:var(--irp-blue);background:var(--irp-paper);cursor:pointer;min-height:40px;}
 #irp-app .irp-pill input{position:absolute;opacity:0;width:1px;height:1px;}
-#irp-app .irp-pill:has(input:checked){background:var(--irp-teal-deep);border-color:var(--irp-teal-deep);color:#fff;font-weight:700;}
+#irp-app .irp-pill:has(input:checked){background:var(--irp-teal-deep);border-color:var(--irp-accent);color:#fff;font-weight:700;}
 #irp-app .irp-pill:has(input:focus-visible){outline:3px solid var(--irp-blue-mid);outline-offset:2px;}
 
 #irp-app .irp-meter{background:var(--irp-tint);border-left:5px solid var(--irp-teal-deep);border-radius:8px;padding:14px 16px;display:grid;gap:8px;}
 #irp-app .irp-meter .row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;}
 #irp-app .irp-meter .count{font-family:var(--irp-display);font-weight:700;font-size:22px;font-variant-numeric:tabular-nums;}
-#irp-app .irp-bar{height:10px;border-radius:6px;background:#fff;border:1px solid var(--irp-line);overflow:hidden;}
+#irp-app .irp-bar{height:10px;border-radius:6px;background:var(--irp-paper);border:1px solid var(--irp-line);overflow:hidden;}
 #irp-app .irp-bar span{display:block;height:100%;background:var(--irp-teal);transition:width .3s ease;}
-#irp-app .irp-ready{background:var(--irp-navy);color:#fff;border-radius:10px;padding:16px 18px;display:flex;gap:14px;align-items:center;}
+#irp-app .irp-ready{background:var(--irp-solid);color:#fff;border-radius:10px;padding:16px 18px;display:flex;gap:14px;align-items:center;}
 #irp-app .irp-ready strong{font-family:var(--irp-display);font-size:20px;color:#fff;}
 #irp-app .irp-ready .acc{flex:none;width:12px;align-self:stretch;border-radius:6px;background:var(--irp-pink);}
 
 /* roadmap */
 #irp-app .irp-part{display:grid;gap:14px;}
 #irp-app .irp-part > h3{font-size:20px;}
-#irp-app .irp-card{border:1.5px solid var(--irp-line);border-radius:12px;overflow:hidden;background:#fff;}
+#irp-app .irp-card{border:1.5px solid var(--irp-line);border-radius:12px;overflow:hidden;background:var(--irp-paper);}
 #irp-app .irp-card .top{background:var(--irp-tint);padding:10px 16px;border-bottom:1px solid var(--irp-line);}
-#irp-app .irp-card .qlabel{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--irp-blue-mid);font-weight:700;}
+#irp-app .irp-card .qlabel{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--irp-accent);font-weight:700;}
 #irp-app .irp-card .qtext{font-family:var(--irp-display);font-weight:600;font-size:17px;}
-#irp-app .irp-card .ans{color:var(--irp-teal-deep);font-weight:700;}
+#irp-app .irp-card .ans{color:var(--irp-accent);font-weight:700;}
 #irp-app .irp-card .inner{padding:14px 16px;display:grid;gap:10px;}
-#irp-app .irp-quote{font-family:var(--irp-display);font-size:19px;font-weight:500;color:var(--irp-navy);border-left:4px solid var(--irp-pink);padding-left:12px;}
+#irp-app .irp-quote{font-family:var(--irp-display);font-size:19px;font-weight:500;color:var(--irp-fg);border-left:4px solid var(--irp-pink);padding-left:12px;}
 #irp-app ul.irp-list{list-style:none;display:grid;gap:12px;}
 #irp-app ul.irp-list li{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start;}
 #irp-app ul.irp-list li > div{min-width:0;}
-#irp-app ul.irp-list b{color:var(--irp-navy);}
+#irp-app ul.irp-list b{color:var(--irp-fg);}
 #irp-app .chip{display:inline-block;font-size:12px;letter-spacing:.04em;text-transform:uppercase;font-weight:700;border-radius:999px;padding:3px 10px;margin-top:2px;white-space:nowrap;min-width:92px;text-align:center;}
-#irp-app .chip.E{background:var(--irp-light3);color:var(--irp-navy);}
+#irp-app .chip.E{background:var(--irp-light3);color:var(--irp-fg);}
 #irp-app .chip.A{background:var(--irp-teal);color:#fff;}
 #irp-app .chip.O{background:var(--irp-blue-mid);color:#fff;}
-#irp-app .chip.T{background:var(--irp-navy);color:#fff;}
-#irp-app .chip.Q{background:#fff;color:var(--irp-teal-deep);border:1.5px solid var(--irp-teal-deep);}
+#irp-app .chip.T{background:var(--irp-solid);color:#fff;}
+#irp-app .chip.Q{background:var(--irp-paper);color:var(--irp-accent);border:1.5px solid var(--irp-teal-deep);}
 #irp-app .irp-ladder{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}
 @media (max-width:560px){#irp-app .irp-ladder{grid-template-columns:1fr;}}
 #irp-app .irp-ladder > div{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start;font-size:15px;}
 #irp-app .irp-empty{color:var(--irp-muted);display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
-#irp-app .irp-link{background:none;border:0;color:var(--irp-blue-mid);text-decoration:underline;padding:0;font-weight:700;}
-#irp-app .irp-tipgroup{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--irp-blue-mid);font-weight:700;margin-top:4px;}
+#irp-app .irp-link{background:none;border:0;color:var(--irp-accent);text-decoration:underline;padding:0;font-weight:700;}
+#irp-app .irp-tipgroup{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--irp-accent);font-weight:700;margin-top:4px;}
 
 #irp-app .irp-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:space-between;align-items:center;}
 #irp-app .irp-btn{border:0;border-radius:10px;padding:13px 20px;font-weight:700;font-size:16px;background:var(--irp-blue-mid);color:#fff;min-height:48px;}
 #irp-app .irp-btn:hover{background:var(--irp-blue);}
-#irp-app .irp-btn.ghost{background:#fff;color:var(--irp-blue);border:1.5px solid var(--irp-light2);}
+#irp-app .irp-btn.ghost{background:var(--irp-paper);color:var(--irp-blue);border:1.5px solid var(--irp-light2);}
 #irp-app .irp-btn.ghost:hover{background:var(--irp-tint);}
-#irp-app .irp-btn.dark{background:var(--irp-navy);}
+#irp-app .irp-btn.dark{background:var(--irp-solid);}
 #irp-app .irp-btn.dark:hover{background:var(--irp-blue);}
-#irp-app .irp-confirm{background:#fff;border:1.5px solid var(--irp-pink);border-radius:10px;padding:12px 14px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
+#irp-app .irp-confirm{background:var(--irp-paper);border:1.5px solid var(--irp-pink);border-radius:10px;padding:12px 14px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
 #irp-app .irp-note{font-size:14px;color:var(--irp-muted);}
-#irp-app .irp-saved{font-size:14px;color:var(--irp-teal-deep);font-weight:700;}
+#irp-app .irp-saved{font-size:14px;color:var(--irp-accent);font-weight:700;}
 #irp-app .irp-foot{border-top:1px solid var(--irp-line);padding-block:12px;font-size:13px;color:var(--irp-muted);background:var(--irp-paper);}
 @media (prefers-reduced-motion:reduce){#irp-app *{transition:none!important;}}
 </style>
 </head><body>
-<p class="draft-note"><strong>Draft for review.</strong> This is the parent version of Interview Ready. It is not on Kajabi yet. Try it with made up answers. Your answers stay in your browser.</p>
-
 <div id="irp-app">
   <header class="irp-head irp-pad">
+    <div>
     <h1>Interview Ready Parent Roadmap</h1>
     <p class="irp-sub">Wired to Work: Your Brain, Your Path</p>
     <p class="irp-tag">Support your young adult in a way that keeps them in the lead.</p>
-    <svg class="irp-star" viewBox="0 0 60 60" aria-hidden="true">
-      <circle cx="30" cy="30" r="17" fill="none" stroke="#9CCECE" stroke-width="1.5"/>
-      <path d="M30 2 L34 26 L58 30 L34 34 L30 58 L26 34 L2 30 L26 26 Z" fill="#1da1a5"/>
-      <path d="M30 2 L34 26 L30 30 Z M58 30 L34 34 L30 30 Z M30 58 L26 34 L30 30 Z M2 30 L26 26 L30 30 Z" fill="#9CCECE"/>
-      <circle cx="30" cy="30" r="3" fill="#ffffff"/>
-    </svg>
+    </div>
+    <svg class="irp-star" viewBox="0 0 100 100" aria-hidden="true"><g id="irp-rose"></g></svg>
   </header>
 
   <nav class="irp-steps irp-pad" aria-label="Roadmap steps">
@@ -279,7 +278,6 @@
       </div>
       <p class="irp-callout"><strong>Compare roadmaps.</strong> If your young adult filled out their own Interview Ready Roadmap, sit down together. Start with where you agree. Then ask about where you differ. Their answers lead the plan.</p>
       <div class="irp-actions">
-        <button class="irp-btn dark" type="button" id="irp-pdf">Download my roadmap (PDF)</button>
         <button class="irp-btn ghost" type="button" id="irp-reset">Start over</button>
       </div>
       <div id="irp-confirm" class="irp-confirm" hidden>
@@ -287,14 +285,13 @@
         <button class="irp-btn ghost" type="button" id="irp-reset-no">Keep them</button>
         <button class="irp-btn dark" type="button" id="irp-reset-yes">Yes, clear</button>
       </div>
-      <p class="irp-note" id="irp-pdf-msg">Your answers save on this device. Come back after you talk and update them.</p>
+      <p class="irp-note">Your answers save on this device. Come back after you talk and update them.</p>
     </section>
   </div>
 
   <footer class="irp-foot irp-pad">Groundwork Collaborative | Wired to Work: Your Brain, Your Path</footer>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script>
 (function(){
   var LV = {E:"Encourage", A:"Ask", O:"Offer", T:"Do together", Q:"Ask"};
@@ -553,117 +550,16 @@
     $("irp-confirm").hidden = true; go(1);
   });
 
-  // PDF
-  function fmtDate(d){ if(!d) return ""; var p = d.split("-"); return p.length===3 ? (+p[1])+"/"+(+p[2])+"/"+p[0] : d; }
-  $("irp-pdf").addEventListener("click", function(){
-    var msg = $("irp-pdf-msg");
-    if (!window.jspdf || !window.jspdf.jsPDF) { msg.textContent = "The download tool did not load. Check your connection and try again."; return; }
-    try {
-      var doc = new window.jspdf.jsPDF({unit:"pt", format:"letter"});
-      var W = 612, H = 792, M = 50, CW = W - M*2, y = 0;
-      var NAVY=[1,42,78], BLUE=[3,86,122], MID=[16,141,170], TEAL=[29,161,165], TINT=[233,243,243], DEEP=[3,95,106], MUTE=[63,95,110], L3=[184,215,216];
-      var CHIP = {E:{bg:L3,fg:NAVY},A:{bg:TEAL,fg:[255,255,255]},O:{bg:MID,fg:[255,255,255]},T:{bg:NAVY,fg:[255,255,255]},Q:{bg:TINT,fg:DEEP}};
-      function col(c){ doc.setTextColor(c[0],c[1],c[2]); }
-      function fill(c){ doc.setFillColor(c[0],c[1],c[2]); }
-      function need(h){ if (y + h > H - 60) { doc.addPage(); y = 56; } }
-      function para(text, size, style, color, indent){
-        indent = indent||0; doc.setFont("helvetica", style); doc.setFontSize(size); col(color);
-        var lines = doc.splitTextToSize(text, CW - indent), lh = size*1.35;
-        lines.forEach(function(l){ need(lh); doc.text(l, M+indent, y+size); y += lh; });
-      }
-      function band(title, sub){
-        need(44); fill(TINT); doc.rect(M, y, CW, sub?40:28, "F"); fill(TEAL); doc.rect(M, y, 4, sub?40:28, "F");
-        doc.setFont("helvetica","bold"); doc.setFontSize(11); col(NAVY); doc.text(doc.splitTextToSize(title, CW-28)[0], M+14, y+18);
-        if (sub) { col(DEEP); doc.text(doc.splitTextToSize(sub, CW-28)[0], M+14, y+33); }
-        y += (sub?40:28) + 10;
-      }
-      function chipRow(lvl, text, plain){
-        need(30);
-        var c = CHIP[lvl]; fill(c.bg); doc.roundedRect(M, y+1, 74, 15, 7, 7, "F");
-        doc.setFont("helvetica","bold"); doc.setFontSize(7.5); doc.setTextColor(c.fg[0],c.fg[1],c.fg[2]);
-        doc.text(LV[lvl].toUpperCase(), M+37, y+11, {align:"center"});
-        if (plain) { para(text, 10.5, "normal", NAVY, 84); }
-        else { var p = split(text); para(p[0], 10.5, "bold", NAVY, 84); if (p[1]) para(p[1], 10.5, "normal", NAVY, 84); }
-        y += 6;
-      }
-      function field(label, val){ need(70); band(label); para(val ? val : "____________________________________________", 11, "normal", NAVY, 14); y += 6; }
-
-      fill(NAVY); doc.rect(0,0,W,96,"F"); fill(TEAL); doc.rect(0,96,W,4,"F");
-      doc.setFont("helvetica","bold"); doc.setFontSize(24); doc.setTextColor(255,255,255); doc.text("My Interview Ready Parent Roadmap", M, 46);
-      doc.setFont("helvetica","normal"); doc.setFontSize(11); doc.text("Wired to Work: Your Brain, Your Path", M, 66);
-      doc.setTextColor(184,215,216); doc.setFontSize(10); doc.text("Support your young adult in a way that keeps them in the lead.", M, 82);
-      y = 126;
-      doc.setFont("helvetica","bold"); doc.setFontSize(11); col(BLUE); doc.text("Name: ", M, y); doc.setFont("helvetica","normal"); col(NAVY); doc.text(S.name || "", M+40, y);
-      doc.setFont("helvetica","bold"); col(BLUE); doc.text("Young adult: ", M+190, y); doc.setFont("helvetica","normal"); col(NAVY); doc.text(S.ya || "", M+262, y);
-      doc.setFont("helvetica","bold"); col(BLUE); doc.text("Date: ", M+390, y); doc.setFont("helvetica","normal"); col(NAVY); doc.text(fmtDate(S.date), M+424, y);
-      y += 20;
-      var yes = S.box.filter(function(b){ return b==="yes"; }).length + S.prac.filter(Boolean).length;
-      if (yes===TOTAL) { need(36); fill(NAVY); doc.roundedRect(M, y, CW, 32, 5, 5, "F"); doc.setFont("helvetica","bold"); doc.setFontSize(13); doc.setTextColor(255,255,255); doc.text(Who()+" is interview ready. Every item is done.", M+14, y+21); y += 44; }
-
-      band("What I see in "+who());
-      if ((S.strength||"").trim()) { para("“"+S.strength.trim()+"”", 12, "bold", NAVY, 14); para("Tell them this before the interview. Hearing it from you helps them believe it.", 10.5, "normal", MUTE, 14); }
-      else para("Not answered yet.", 10.5, "italic", MUTE, 14);
-      y += 8;
-      var r = ROLES.filter(function(x){ return x.k===S.role; })[0];
-      band("My support style", r ? r.title : "Not answered yet");
-      if (r) { para(r.text, 10.5, "normal", NAVY, 14); y += 4; para("Try asking: "+r.starter, 10.5, "bold", DEEP, 14); }
-      y += 8;
-      need(60);
-      para("Talk together", 15, "bold", NAVY); y += 6;
-      band("Ways to start the talk");
-      [["Open the door", ["\"How are you feeling about this interview?\"","\"What part are you looking forward to?\"","\"What's on your mind about it?\""]],
-       ["Hand them the choice", ["\"Do you want help with this, or do you want to handle it yourself?\"","\"Would it help more if I listened or gave ideas?\"","\"Is now a good time to talk about it, or later?\""]],
-       ["Listen without fixing", ["\"That makes sense.\"","\"What do you think you'll do?\"","\"Do you want my thoughts, or did you just need to say it out loud?\""]],
-       ["Repair if you overstep", ["\"I think I jumped in too fast. Let me try again.\"","\"You've got this one. I'll step back.\"","\"Tell me if I'm helping too much.\""]]
-      ].forEach(function(g){ need(50); para(g[0], 11, "bold", BLUE, 14); g[1].forEach(function(l){ para(l, 10.5, "normal", NAVY, 26); }); y += 6; });
-      band("How to ask");
-      ["Talk side by side. A car ride, a walk or cooking together often feels easier than sitting face to face.",
-       "Ask one question at a time. Give them time to answer.",
-       "Skip \"why\" questions. They can feel like a test. Try \"what\" or \"how.\"",
-       "Let them say no. \"Not now\" is a real answer."].forEach(function(l){ para("•  "+l, 10.5, "normal", NAVY, 14); });
-      y += 6;
-      band("Go first: share a little of your own story");
-      para("When you open up first, it's easier for them to open up too. Keep it short and bring it back to them.", 10.5, "normal", NAVY, 14);
-      para("\"My first interview made me so nervous I forgot the interviewer's name. What feels hard for you?\"", 10.5, "bold", NAVY, 14);
-      y += 8;
-      band("The support ladder: start at the lightest level that works");
-      [["E","Say what you see."],["A","Let them tell you what they need."],["O","Name one way you could help. Let them choose."],["T","Only when they ask."]].forEach(function(x){ chipRow(x[0], x[1], true); });
-      y += 6;
-
-      para("Part 1: ways to support, from my answers", 15, "bold", NAVY); y += 6;
-      Q.forEach(function(q, i){
-        var o = q.opts.filter(function(x){ return x.k===S.q[q.id]; })[0];
-        band("Question "+(i+3)+" | "+q.text, o ? o.label : "Not answered yet");
-        if (o) o.steps.forEach(function(s){ chipRow(s[0], s[1]); });
-        y += 4;
-      });
-
-      need(60); y += 6;
-      para("Part 2: conversations to have", 15, "bold", NAVY); y += 6;
-      var asked = [], prog = [];
-      ITEMS.forEach(function(it, i){ if (S.box[i]==="notasked") asked.push(it); if (S.box[i]==="notyet") prog.push(it); });
-      var openP = P.filter(function(it, i){ return !S.prac[i]; });
-      if (openP.length) { band("Practical details: "+openP.length+" still open"); if (S.pracAsk) chipRow("Q", PASK, true); openP.forEach(function(it){ chipRow(it.tip[0], it.tip[1]); }); }
-      if (asked.length) { band("Questions to ask "+who()); asked.forEach(function(it){ chipRow("Q", it.ask, true); }); }
-      if (prog.length) { band("Ways to support what is still in progress"); prog.forEach(function(it){ chipRow(it.tip[0], it.tip[1]); }); }
-      if (!asked.length && !prog.length && !openP.length) para(yes===TOTAL ? "Every item is done." : "Finish the support check to see your conversation starters.", 11, "normal", NAVY);
-      y += 8;
-
-      field("In their words: how they want my help", S.words);
-      field("One way I will support them this week", S.wsup);
-      field("One way I will step back this week", S.wstep);
-
-      var pages = doc.getNumberOfPages();
-      for (var pg=1; pg<=pages; pg++) {
-        doc.setPage(pg); doc.setDrawColor(207,226,227); doc.line(M, H-40, W-M, H-40);
-        doc.setFont("helvetica","normal"); doc.setFontSize(8.5); col(MUTE);
-        doc.text("Groundwork Collaborative | Wired to Work: Your Brain, Your Path", M, H-26);
-        doc.text("Page "+pg+" of "+pages, W-M, H-26, {align:"right"});
-      }
-      doc.save("My-Interview-Ready-Parent-Roadmap.pdf");
-      msg.textContent = "Your roadmap PDF is downloading. On a phone, look for it in your Files or Downloads.";
-    } catch(err) { msg.textContent = "The download could not start here. Try again in your browser."; }
-  });
+  // compass rose, same drawing as the Interview Ready Roadmap
+  (function(){
+    var g=document.getElementById("irp-rose"), cx=50, cy=50, out="";
+    for (var k=0;k<8;k++){
+      var a=(90-45*k)*Math.PI/180, L=k%2?30:46;
+      var pts=[[0,L],[22.5,9],[-22.5,9]].map(function(v){var aa=a+v[0]*Math.PI/180;return [(cx+v[1]*Math.cos(aa)).toFixed(1),(cy-v[1]*Math.sin(aa)).toFixed(1)].join(",");}).join(" ");
+      out+='<polygon points="'+pts+'" fill="'+(k===0?"#00A3B1":(k%2?"#4C95D6":"#FFFFFF"))+'"/>';
+    }
+    g.innerHTML=out+'<circle cx="50" cy="50" r="5" fill="#1C3557"/>';
+  })();
 
   render();
 })();
